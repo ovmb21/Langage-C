@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+
+std::string valide(double note){
+    if (note<0 || note >20 ) return "Non \n";
+    return "Ok";
+}
+
+int main(){
+    double note;
+    std::cout <<"Note : ";
+    std::cin >> note ;
+    std::cout <<valide(note)<< "\n";
+    return 0;
+}
