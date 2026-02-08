@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+
+std::string mention(double note) {  ***Ici on crée la fonction "mention", "double" assure la prise en compte des chiffres à virgule et "note" c'est la variable que prendra la fonction***
+    if (note < 0 || note > 20) return "Invalide";
+    if (note <10) return "Echec";
+    if (note < 14) return "Réussi";
+    if (note < 16) return "Bien";
+    return "Très bien";
+}
+
+
+int main() {
+    double note;
+    std::cout << "Note (0-20) : ";
+    std::cin >> note; 
+    
+    std::cout << mention(note)<< "\n";
+    return 0;
+}
