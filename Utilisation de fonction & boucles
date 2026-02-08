@@ -1,0 +1,32 @@
+#include <iostream> //Permet d'utiliser les outils d'entrée/sortie
+#include <string> //Permet d'utiliser du texte 
+
+std::string valide(double note){ //Fonction qui va vérifier si la note est possible ou pas
+    if (note < 0 || note > 20 ) return "Non";
+    return "Ok";
+}
+std::string mention(double note){ //Fonction qui va nous dire la mention de la note 
+    if (note < 10) return "Eres como el webo";
+    if (note < 14) return "Réussi";
+    if (note < 16) return "Bien";
+    return "Très Bien";
+}
+int main(){ //début du code
+    std::string nom; // Ici on défini la variable nom 
+    for (int i = 0; i < 3; i++){ //i++ c'est comme mettre i = i+1
+        std::cout <<"Nom et prénom : ";
+        std::getline(std::cin, nom); //getline permet de pouvoir écrire Nom et Prénom 
+        double note; //Ici on crée la variable qui prend aussi les décimales qui s'appelle note 
+        
+        std::cout <<"Note : ";
+        std::cin >>note; 
+        
+        while (valide(note) == "Non"){
+            std::cout <<"Invalide, recommence : ";
+            std::cin >>note; 
+        }
+        std::cout << nom << " : " <<mention(note)<<"\n";
+        std::cin.ignore(); //Prépare le prochain tour 
+    }
+    return 0;
+}
