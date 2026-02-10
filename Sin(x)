@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double x; 
+    int n;
+    cin >> x >> n;
+
+    double somme = 0;
+    double terme = x; 
+    somme += terme; //on ajoute le premier terme x
+    
+
+    for ( int k = 1; k < n; ++k) {
+        terme *= (-x*x)/((2*k)*(2*k+1)); //on fait cela par itération 
+        somme += terme; 
+        
+    }
+
+    cout << "sin(x) = " << somme << endl;
+    return 0;
+}
