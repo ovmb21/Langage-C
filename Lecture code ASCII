@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char c; //on crée une variable c qui peut stocker un seul charactère
+    cin >> c;
+    
+    while ( c!= '*') {
+        
+        cout << (int)(unsigned char)c<< " "; //On s'assure que le caractère est vu comme une valeur 
+        cin >> c;
+        
+    }
+
+    return 0;
+}
