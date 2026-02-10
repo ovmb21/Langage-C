@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int nstart, n, nstop;
+    cin >> nstart >> n >> nstop;
+    int somme = 0;
+    int i = nstart; 
+
+
+    do {
+        somme += i;
+        i += n;
+        
+    } while (i <= nstop );
+    
+    cout << "Somme = " << somme << endl;
+    return 0;
+}
