@@ -1,0 +1,14 @@
+int to_binary(int n){
+    if (n==0) return 0;
+    
+    int result = 0; // ici on construit le nombre binaire 
+    int place = 1; // 1 puis 10 puis 100
+    
+    while (n >0){
+        int bit = n%2; //prend le reste de la division par 2 ==> 0 ou 1 
+        result += bit*place; //ajoute ce bit au bon "rang"
+        place*=10; 
+        n /=2; // on divise n par 2 pour continuer
+    }
+    return result;
+}
