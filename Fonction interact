@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+void interact() {
+    float age, weight, height, waiting; //Ici je spécifie le type de variable que je vais pouvoir utiliser dans la fonction
+    char again; //Je détermine une variable charactère
+    
+    do {
+        cout <<"Age:"<< endl;
+        cin >>age;
+        
+        cout <<"Weight:"<< endl;
+        cin >>weight;
+        
+        cout <<"Height:"<< endl; 
+        cin >>height;
+        
+        cout <<"Waiting time:"<< endl;
+        cin >>waiting
+        
+        float bmd = estimate(age, weight, height, waiting);
+        
+        cout <<fixed<<setprecision(2) << bmd << endl; 
+        cin >>again ; 
+        
+        if (again == 'y' || again == 'Y')
+            cout << endl; 
+    } while (again == 'y' || again == 'Y')
+}
