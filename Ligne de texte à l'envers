@@ -1,0 +1,16 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main() {
+    char line[81]; //80 caractères max +1 pour le '\0'
+    
+    cin.getline(line,81); //lit tout 
+    
+    int len = strlen(line); //longueur de la ligne (sans le '\0')
+    
+    for (int i = len -1; i>=0; i--){
+        cout << line[i];
+    }
+    return 0;
+}
