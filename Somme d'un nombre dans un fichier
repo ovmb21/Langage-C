@@ -1,0 +1,17 @@
+#include <iostream>
+#include <fstream>
+
+int main() {
+    long long sum = 0; //Somme totale (long long = grand entier)
+    
+    std::ifstream file("input.txt"); // On ouvre le fichier input.txt
+    
+    int x; // On crée une variable qui va lire chaque entier
+    
+    while (file >> x){ //Tant qu'on lit une variable entière
+        sum+=x; //On l'ajoute à la somme 
+    }
+    
+    std::cout << sum << std::endl;
+    
+}
