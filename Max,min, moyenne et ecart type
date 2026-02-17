@@ -1,0 +1,48 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int m;
+    cin >> m;
+
+    double valeurs[100];
+    double somme = 0.0;
+
+    double max, min;
+    
+    for (int i=0; i<m;i++){
+        cin >> valeurs[i];
+        somme += valeurs[i];
+        
+        if (i==0){
+            min = valeurs[i];
+            max = valeurs[i];
+        }
+        else {
+            if (valeurs[i] < min) min = valeurs[i];
+            if (valeurs[i] > max) max = valeurs[i];
+            
+        }
+        
+    }
+    
+    double moyenne = somme/m;
+    
+    double sommeCarres = 0.0;
+    
+    for (int i = 0; i<m;i++){
+        double diff = valeurs[i] - moyenne;
+        sommeCarres += diff*diff;
+    }
+    
+    double ecartType = sqrt(sommeCarres/m);
+
+    cout << "Somme = " << somme << endl;
+    cout << "Moyenne = " << moyenne << endl;
+    cout << "Ecart-type = " << ecartType << endl;
+    cout << "Max = " << max << endl;
+    cout << "Min = " << min << endl;
+
+    return 0;
+}
