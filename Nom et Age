@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std:: string s;
+    std:: getline(std::cin,s);
+    
+    int pos = s.find(':'); //Donne la position du ":"
+    
+    std:: string name = s.substr(0,pos); //Donne l'élément avant ":"
+    std:: string age = s.substr(pos +1); //Donne l'élément après ":"
+  
+    std::cout << name << std::endl;
+    std::cout << age << std::endl;
+    return 0;
+}
